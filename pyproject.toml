@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nexus-port-scanner"
+version = "0.2.0"
+description = "Lightweight TCP port scanner with IPv4/IPv6 support and JSON reports"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "NEXUS contributors" }]
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["ruff>=0.6"]
+
+[project.urls]
+Homepage = "https://github.com/raxwqx/NEXUS"
+Repository = "https://github.com/raxwqx/NEXUS"
+Issues = "https://github.com/raxwqx/NEXUS/issues"
+
+[project.scripts]
+nexus = "nexus:main"
+
+[tool.setuptools]
+py-modules = ["nexus"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
